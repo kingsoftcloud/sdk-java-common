@@ -9,7 +9,6 @@
   <version>0.0.1</version>
   <packaging>jar</packaging>
 
-<!--  add test-->
   <name>KSYUN SDK for Java</name>
 
   <description>
