@@ -1,0 +1,16 @@
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\constant\ErrorCode.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\BaseResponseModel.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\aws\AWS4EncryptionFactory.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\annotation\KsYunField.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\exception\ClientException.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\aws\AWS4EncryptionUtils.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\BaseClient.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\annotation\KsYunFieldPropertySerializer.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\utils\GetUTCTimeUtil.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\utils\SignUtils.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\utils\HttpClientUtils.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\aws\BinaryUtils.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\BaseRequestModel.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\exception\HttpRequestException.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\utils\SdkHttpUtils.java
+D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java\common\Credential.java
