@@ -86,6 +86,16 @@ public class HttpClientUtils {
             if (StringUtils.isEmpty(head.get("Accept"))) {
                 head.put("Accept", "application/json");
             }
+            if (paramMap != null) {
+                String service = (String)paramMap.get("Service");
+                String action = (String)paramMap.get("Action");
+                String version = (String)paramMap.get("Version");
+                if (url.contains("?")) {
+                    url = url + "&Action=" + action + "&Version=" + version + "&Service=" + service;
+                } else {
+                    url = url + "?Action=" + action + "&Version=" + version + "&Service=" + service;
+                }
+            }
             url = enhanceUrl(url);
             HttpPost httpPost = new HttpPost(url);
             httpPost.setConfig(requestConfig);
