@@ -87,13 +87,12 @@ public class HttpClientUtils {
                 head.put("Accept", "application/json");
             }
             if (paramMap != null) {
-                String service = (String)paramMap.get("Service");
                 String action = (String)paramMap.get("Action");
                 String version = (String)paramMap.get("Version");
                 if (url.contains("?")) {
-                    url = url + "&Action=" + action + "&Version=" + version + "&Service=" + service;
+                    url = url + "&Action=" + action + "&Version=" + version;
                 } else {
-                    url = url + "?Action=" + action + "&Version=" + version + "&Service=" + service;
+                    url = url + "?Action=" + action + "&Version=" + version;
                 }
             }
             url = enhanceUrl(url);
