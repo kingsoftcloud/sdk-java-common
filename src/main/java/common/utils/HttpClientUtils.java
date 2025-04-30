@@ -94,6 +94,9 @@ public class HttpClientUtils {
                 } else {
                     url = url + "?Action=" + action + "&Version=" + version;
                 }
+                // 删除 paramMap 中的 Action 和 Version
+                paramMap.remove("Action");
+                paramMap.remove("Version");
             }
             url = enhanceUrl(url);
             HttpPost httpPost = new HttpPost(url);
