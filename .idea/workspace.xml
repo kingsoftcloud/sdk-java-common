@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="02eb49a7-eceb-4a6e-bb24-e8c3f2601097" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseClient.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseRequestModel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseResponseModel.ErrorDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseResponseModel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/Credential.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/KsYunField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/KsYunFieldPropertySerializer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/class-use/KsYunField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/class-use/KsYunFieldPropertySerializer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/AWS4EncryptionFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/AWS4EncryptionUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/BinaryUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/AWS4EncryptionFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/AWS4EncryptionUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/BinaryUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseClient.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseRequestModel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseResponseModel.ErrorDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseResponseModel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/Credential.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/ErrorCode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/class-use/ErrorCode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/ClientException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/HttpRequestException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/class-use/ClientException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/class-use/HttpRequestException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/GetUTCTimeUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/HttpClientUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/SdkHttpUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/SignUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/GetUTCTimeUtil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/HttpClientUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/SdkHttpUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/SignUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/BaseClient$TestFirstObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/BaseClient$TestSencodObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/BaseClient$TestThirdObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/BaseClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/BaseRequestModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/BaseResponseModel$ErrorDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/BaseResponseModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/Credential.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/annotation/KsYunField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/annotation/KsYunFieldPropertySerializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/aws/AWS4EncryptionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/aws/AWS4EncryptionUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/aws/BinaryUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/constant/ErrorCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/exception/ClientException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/exception/HttpRequestException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/utils/GetUTCTimeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/utils/HttpClientUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/utils/SdkHttpUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/utils/SignUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ksyun-sdk-java-common-0.0.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ksyun-sdk-java-common-0.0.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ksyun-sdk-java-common-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <list id="d140c70e-06a3-45c7-897c-5b0f270d7fde" name="New changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Program Files/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2U5wM3Gfc2AB7cv8yRzrYrtRJFU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature-20250509-upgrade-aws4",
+    "last_opened_file_path": "D:/workplace/git_ezone/business-platform/ksyun-sdk-java-common",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java" />
+      <recent name="D:\kingSoft\git\java-sdk-githug\sdk-java-common" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02eb49a7-eceb-4a6e-bb24-e8c3f2601097" name="Changes" comment="" />
+      <changelist id="d140c70e-06a3-45c7-897c-5b0f270d7fde" name="New changelist" comment="" />
+      <created>1692242697668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692242697668</updated>
+      <workItem from="1692242698716" duration="11961000" />
+      <workItem from="1693281839295" duration="1480000" />
+      <workItem from="1693562583393" duration="1257000" />
+      <workItem from="1694160145231" duration="2287000" />
+      <workItem from="1694577548412" duration="30000" />
+      <workItem from="1746778646499" duration="9622000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
