@@ -1,6 +1,7 @@
 common\BaseClient$TestSencodObj.class
 common\aws\AWS4EncryptionFactory.class
 common\utils\SignUtils.class
+common\utils\RpcRequestClient$1.class
 common\BaseClient.class
 common\constant\ErrorCode.class
 common\annotation\KsYunField.class
@@ -10,11 +11,13 @@ common\aws\BinaryUtils.class
 common\annotation\KsYunFieldPropertySerializer.class
 common\BaseClient$TestFirstObj.class
 common\BaseResponseModel.class
+common\RpcRequestContentModel.class
 common\exception\HttpRequestException.class
 common\utils\GetUTCTimeUtil.class
 common\BaseResponseModel$ErrorDto.class
 common\aws\AWS4EncryptionUtils.class
 common\BaseClient$TestThirdObj.class
+common\utils\RpcRequestClient.class
 common\Credential.class
 common\BaseRequestModel.class
 common\utils\SdkHttpUtils.class
