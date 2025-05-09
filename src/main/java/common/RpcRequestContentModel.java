@@ -1,11 +1,9 @@
 package common;
 
+import lombok.Builder;
 import lombok.Data;
-
-import java.util.HashMap;
-import java.util.Map;
-
 @Data
+@Builder
 public class RpcRequestContentModel {
     /**
      * 服务名
@@ -39,16 +37,16 @@ public class RpcRequestContentModel {
     private String secretAccessKey = "";
 
     /**
-     * 链接时间10s
+     * 连接超时,默认10s
+     * 建立 TCP 连接的最大等待时间（单位：毫秒）
      */
+    @Builder.Default
     private Integer connectTimeout = 10000;
 
     /**
-     * 读取时间10s
+     * 套接字超时/读取超时，默认10s
+     * 两次数据包之间的最大间隔时间（单位：毫秒）
      */
+    @Builder.Default
     private Integer socketTimeout = 10000;
-
-
-
-
 }
