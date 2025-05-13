@@ -5,84 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02eb49a7-eceb-4a6e-bb24-e8c3f2601097" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/common/utils/RequestHelpUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/BaseClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseRequestModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/BaseRequestModel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseResponseModel.ErrorDto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/BaseResponseModel.ErrorDto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/BaseResponseModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/BaseResponseModel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/Credential.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/Credential.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/RpcRequestContentModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/RpcRequestContentModel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/KsYunField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/KsYunField.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/KsYunFieldPropertySerializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/KsYunFieldPropertySerializer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/class-use/KsYunField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/class-use/KsYunField.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/class-use/KsYunFieldPropertySerializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/class-use/KsYunFieldPropertySerializer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/annotation/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/annotation/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/AWS4EncryptionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/AWS4EncryptionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/AWS4EncryptionUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/AWS4EncryptionUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/BinaryUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/BinaryUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/AWS4EncryptionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/AWS4EncryptionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/AWS4EncryptionUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/AWS4EncryptionUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/BinaryUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/class-use/BinaryUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/aws/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/aws/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseRequestModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseRequestModel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseResponseModel.ErrorDto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseResponseModel.ErrorDto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseResponseModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/class-use/BaseResponseModel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/Credential.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/class-use/Credential.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/class-use/RpcRequestContentModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/class-use/RpcRequestContentModel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/ErrorCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/constant/ErrorCode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/class-use/ErrorCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/constant/class-use/ErrorCode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/constant/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/constant/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/constant/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/constant/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/constant/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/ClientException.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/ClientException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/HttpRequestException.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/HttpRequestException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/class-use/ClientException.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/class-use/ClientException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/class-use/HttpRequestException.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/class-use/HttpRequestException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/exception/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/exception/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/GetUTCTimeUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/GetUTCTimeUtil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/HttpClientUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/HttpClientUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/RpcRequestClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/RpcRequestClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/SdkHttpUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/SdkHttpUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/SignUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/SignUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/GetUTCTimeUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/GetUTCTimeUtil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/HttpClientUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/HttpClientUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/RpcRequestClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/RpcRequestClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/SdkHttpUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/SdkHttpUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/SignUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/class-use/SignUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/common/utils/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/common/utils/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/index-all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/overview-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <list id="d140c70e-06a3-45c7-897c-5b0f270d7fde" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,29 +47,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature-20250509-upgrade-aws4",
-    "last_opened_file_path": "D:/kingSoft/git/java-sdk-githug/sdk-java-common/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature-20250509-upgrade-aws4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/kingSoft/git/java-sdk-githug/sdk-java-common/src/main/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\kingSoft\git\java-sdk-githug\sdk-java-common\src\main\java" />
       <recent name="D:\kingSoft\git\java-sdk-githug\sdk-java-common" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="common.constant" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -165,6 +91,7 @@
       <workItem from="1694577548412" duration="30000" />
       <workItem from="1747049640505" duration="154000" />
       <workItem from="1747050203361" duration="1227000" />
+      <workItem from="1747125299926" duration="6730000" />
     </task>
     <servers />
   </component>

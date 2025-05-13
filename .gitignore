@@ -62,4 +62,5 @@ hs_err_pid*
 .springBeans
 .metadata/
 target/*
+.idea/*
 .externalToolBuilders
