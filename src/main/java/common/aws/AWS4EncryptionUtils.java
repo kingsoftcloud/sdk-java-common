@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 import static com.ksc.util.StringUtils.UTF8;
 
+@Deprecated
 @Slf4j
 public class AWS4EncryptionUtils {
     public static void generateSignature(AWS4EncryptionFactory aws4EncryptionFactory, String requestMethod) throws Exception {

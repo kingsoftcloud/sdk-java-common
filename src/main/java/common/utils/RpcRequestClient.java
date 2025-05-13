@@ -241,6 +241,7 @@ public class RpcRequestClient {
         });
     }
 
+    //put,post,patch 请求设置请求体
     private void setRequestContent(HttpRequestBase httpRequest,
                                    SdkHttpFullRequest signedRequest,
                                    Map<String, String> params) {
@@ -261,7 +262,7 @@ public class RpcRequestClient {
                     List<BasicNameValuePair> nameValuePairList = new ArrayList<>();
                     List<String> keyList = params.keySet().stream().sorted().collect(Collectors.toList());
                     keyList.forEach(key -> {
-                        BasicNameValuePair basicNameValuePair = new BasicNameValuePair(key, String.valueOf(params.get(key)));
+                        BasicNameValuePair basicNameValuePair = new BasicNameValuePair(key, params.get(key));
                         nameValuePairList.add(basicNameValuePair);
                     });
                     UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(nameValuePairList, StandardCharsets.UTF_8);

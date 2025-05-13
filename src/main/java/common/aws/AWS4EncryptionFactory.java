@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 @Data
 @Slf4j
+@Deprecated
 public class AWS4EncryptionFactory {
 
     public static final String X_AMZ_DATA = "x-amz-date";
