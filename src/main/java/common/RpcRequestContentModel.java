@@ -37,16 +37,16 @@ public class RpcRequestContentModel {
     private String secretAccessKey = "";
 
     /**
-     * 连接超时,默认10s
+     * 连接超时,默认60s
      * 建立 TCP 连接的最大等待时间（单位：毫秒）
      */
     @Builder.Default
-    private Integer connectTimeout = 10000;
+    private Integer connectTimeout = 60000;
 
     /**
-     * 套接字超时/读取超时，默认10s
+     * 套接字超时/读取超时，默认60s
      * 两次数据包之间的最大间隔时间（单位：毫秒）
      */
     @Builder.Default
-    private Integer socketTimeout = 10000;
+    private Integer socketTimeout = 60000;
 }
