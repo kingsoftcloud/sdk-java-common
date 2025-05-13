@@ -11,6 +11,7 @@ D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\com
 D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\common\BaseClient.java
 D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\common\exception\ClientException.java
 D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\common\utils\HttpClientUtils.java
+D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\common\utils\RequestHelpUtils.java
 D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\common\constant\ErrorCode.java
 D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\common\aws\AWS4EncryptionFactory.java
 D:\workplace\git_ezone\business-platform\ksyun-sdk-java-common\src\main\java\common\aws\BinaryUtils.java

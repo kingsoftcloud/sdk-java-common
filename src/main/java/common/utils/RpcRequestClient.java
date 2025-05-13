@@ -322,11 +322,12 @@ public class RpcRequestClient {
             RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(rpcRequestContentModel.getSocketTimeout()).setConnectTimeout(rpcRequestContentModel.getConnectTimeout()).build();
             httpRequest.setConfig(requestConfig);
 
-
-            String curl = HttpClientUtils.convertHttpClientToCurl((HttpPost) httpRequest);
+            String curl = HttpClientUtils.convertHttpClientToCurl(httpRequest);
             log.info("begin rpc request curl:{}", curl);
 
             HttpResponse response = httpClient.execute(httpRequest);
+            Objects.requireNonNull(response.getEntity(), "response content is null");
+
             String result = EntityUtils.toString(response.getEntity(), StandardCharsets.UTF_8);
             JSONObject jsonObject = JSONObject.parseObject(result);
             jsonObject.put("result", result);

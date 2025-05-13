@@ -15,6 +15,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+
 import java.io.IOException;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
@@ -135,23 +136,32 @@ public class HttpClientUtils {
         return result;
     }
 
-    public static String convertHttpClientToCurl(HttpPost httpPost) throws IOException {
-        StringBuilder curlCommand = new StringBuilder("curl ");
-        // 添加 URL
-        curlCommand.append("'" + httpPost.getURI() + "' ");
-        // 添加请求方法
-        curlCommand.append("-X " + httpPost.getMethod() + " ");
-        // 添加请求头
-        for (Header header : httpPost.getAllHeaders()) {
-            curlCommand.append("-H '" + header.getName() + ": " + header.getValue() + "' ");
+    public static String convertHttpClientToCurl(HttpRequestBase httpRequestBase) throws IOException {
+        try {
+            StringBuilder curlCommand = new StringBuilder("curl ");
+            // 添加 URL
+            curlCommand.append("'").append(httpRequestBase.getURI()).append("' ");
+            // 添加请求方法
+            curlCommand.append("-X ").append(httpRequestBase.getMethod()).append(" ");
+            // 添加请求头
+            for (Header header : httpRequestBase.getAllHeaders()) {
+                curlCommand.append("-H '").append(header.getName()).append(": ").append(header.getValue()).append("' ");
+            }
+
+            // post
+            if (httpRequestBase instanceof HttpEntityEnclosingRequestBase) {
+                HttpEntityEnclosingRequestBase httpRequest = (HttpEntityEnclosingRequestBase) httpRequestBase;
+                if (httpRequest.getEntity() instanceof StringEntity) {
+                    StringEntity stringEntity = (StringEntity) httpRequest.getEntity();
+                    String requestBody = EntityUtils.toString(stringEntity);
+                    curlCommand.append("-d '").append(requestBody).append("' ");
+                }
+            }
+            return curlCommand.toString();
+        } catch (Exception ex) {
+            log.error("to curl occur error", ex);
         }
-        // 添加请求体
-        if (httpPost.getEntity() instanceof StringEntity) {
-            StringEntity stringEntity = (StringEntity) httpPost.getEntity();
-            String requestBody = EntityUtils.toString(stringEntity);
-            curlCommand.append("-d '" + requestBody + "' ");
-        }
-        return curlCommand.toString();
+        return "";
     }
 
 
