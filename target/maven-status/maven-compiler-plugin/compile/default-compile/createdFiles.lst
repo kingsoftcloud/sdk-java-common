@@ -9,6 +9,7 @@ common\BaseClient$TestFirstObj.class
 common\BaseResponseModel.class
 common\aws\AWS4EncryptionUtils.class
 common\BaseRequestModel.class
+common\constant\RequestMethodEnum.class
 common\BaseClient$TestSencodObj.class
 common\utils\RpcRequestClient$1.class
 common\constant\ErrorCode.class
