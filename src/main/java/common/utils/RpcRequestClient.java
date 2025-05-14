@@ -1,6 +1,5 @@
 package common.utils;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import common.RpcRequestContentModel;
 import lombok.extern.slf4j.Slf4j;
@@ -8,6 +7,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.*;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -20,6 +20,7 @@ import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
@@ -44,8 +45,8 @@ public class RpcRequestClient {
         this.rpcRequestContentModel = rpcRequestContentModel;
     }
 
-    public String beginRpcRequest(String url, String requestMethod, Map<String, String> paramMap) {
-        return beginRpcRequest(url, requestMethod, paramMap, new HashMap<>());
+    public String beginRpcRequest(String url, String requestMethod, Map<String, Object> requestParams) {
+        return beginRpcRequest(url, requestMethod, requestParams, new HashMap<>());
     }
 
     /**
@@ -53,17 +54,23 @@ public class RpcRequestClient {
      *
      * @param url           api地址
      * @param requestMethod 请求方法
-     * @param paramMap      请求参数
+     * @param requestParam  请求参数
      * @param head          请求头
      * @return
      */
-    public String beginRpcRequest(String url, String requestMethod, Map<String, String> paramMap, Map<String, String> head) {
+    public String beginRpcRequest(String url, String requestMethod, Map<String, Object> requestParam, Map<String, String> head) {
         //如果没有http协议，则添加http协议
         url = enhanceUrl(url);
 
+        // Initialize RPC headers with input head map
+        final Map<String, String> rpcHead = new HashMap<>(head);
+
+        // Initialize RPC parameters with input request parameters
+        final Map<String, Object> rpcParam = new HashMap<>(requestParam);
+
         try {
             // 1. 创建签名请求
-            SdkHttpFullRequest unsignedRequest = createUnsignedRequest(url, paseSdkHttpMethod(requestMethod), paramMap, head);
+            SdkHttpFullRequest unsignedRequest = createUnsignedRequest(url, paseSdkHttpMethod(requestMethod), rpcParam, rpcHead);
 
             // 2. 使用AWS SDK签名器进行签名
             SdkHttpFullRequest signedRequest = signRequest(
@@ -73,7 +80,7 @@ public class RpcRequestClient {
             );
 
             // 3. 转换为Apache HttpClient请求
-            HttpRequestBase httpRequest = convertToHttpRequest(signedRequest, paramMap);
+            HttpRequestBase httpRequest = convertToHttpRequest(signedRequest, rpcParam);
 
             // 4. 执行请求
             return executeRequest(httpRequest);
@@ -120,7 +127,7 @@ public class RpcRequestClient {
     public SdkHttpFullRequest createUnsignedRequest(
             String endpoint,
             SdkHttpMethod method,
-            Map<String, String> paramMap,
+            Map<String, Object> requestParam,
             Map<String, String> head) throws URISyntaxException {
 
         URI uri = new URI(endpoint);
@@ -133,23 +140,28 @@ public class RpcRequestClient {
                 || method == SdkHttpMethod.DELETE
                 || method == SdkHttpMethod.HEAD
                 || method == SdkHttpMethod.OPTIONS) {
-            if (paramMap != null) {
-                paramMap.forEach(builder::appendRawQueryParameter);
+            if (requestParam != null) {
+                requestParam.forEach((key, value) -> {
+                    if (value == null) {
+                        return;
+                    }
+                    builder.putRawQueryParameter(key, value.toString());
+                });
             }
         } else if (method == SdkHttpMethod.POST
                 || method == SdkHttpMethod.PUT
                 || method == SdkHttpMethod.PATCH) {
             // 根据内容类型设置请求体
-            if (paramMap != null && !paramMap.isEmpty()) {
+            if (requestParam != null && !requestParam.isEmpty()) {
                 String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
                 if ("application/json".equalsIgnoreCase(contentType)) {
-                    String jsonBody = buildJsonBody(paramMap);
+                    String jsonBody = buildJsonBody(requestParam);
                     builder.putHeader("Content-Type", "application/json")
                             .contentStreamProvider(() ->
                                     new StringInputStream(jsonBody));
                 } else {
                     // 表单格式请求体 (默认)
-                    String formData = buildFormData(paramMap);
+                    String formData = buildFormData(requestParam);
                     builder.putHeader("Content-Type", "application/x-www-form-urlencoded")
                             .contentStreamProvider(() ->
                                     new StringInputStream(formData));
@@ -192,11 +204,11 @@ public class RpcRequestClient {
      * 将 AWS SDK 的请求转换为 Apache HttpClient 请求
      *
      * @param signedRequest 已签名的 AWS 请求
-     * @param params        请求参数
+     * @param requestParam  请求参数
      * @return 转换后的 HttpRequestBase 对象
      */
     public HttpRequestBase convertToHttpRequest(SdkHttpFullRequest signedRequest,
-                                                Map<String, String> params) {
+                                                Map<String, Object> requestParam) {
         // 1. 根据请求方法创建对应的 HTTP 请求对象
         HttpRequestBase httpRequest = createRequestByMethod(signedRequest);
 
@@ -204,7 +216,7 @@ public class RpcRequestClient {
         addHeaders(httpRequest, signedRequest);
 
         // 3. 设置请求体和参数
-        setRequestContent(httpRequest, signedRequest, params);
+        setRequestContent(httpRequest, signedRequest, requestParam);
 
         return httpRequest;
     }
@@ -244,61 +256,76 @@ public class RpcRequestClient {
     //put,post,patch 请求设置请求体
     private void setRequestContent(HttpRequestBase httpRequest,
                                    SdkHttpFullRequest signedRequest,
-                                   Map<String, String> params) {
-        if (httpRequest instanceof HttpEntityEnclosingRequestBase && params != null) {
+                                   Map<String, Object> requestParam) {
+        if (httpRequest instanceof HttpEntityEnclosingRequestBase && requestParam != null) {
             HttpEntityEnclosingRequestBase entityRequest = (HttpEntityEnclosingRequestBase) httpRequest;
+
+            if (signedRequest == null) {
+                throw new IllegalArgumentException("Signed request cannot be null");
+            }
 
             // 根据内容类型设置请求体
             String contentType = signedRequest.firstMatchingHeader("Content-Type")
+                    .map(String::toLowerCase)
                     .orElse("application/x-www-form-urlencoded");
 
             try {
-                if (contentType.contains("application/json")) {
+                if (contentType.equalsIgnoreCase("application/json")) {
                     // JSON 格式请求体
-                    String jsonBody = buildJsonBody(params);
-                    entityRequest.setEntity(new StringEntity(jsonBody));
+                    String jsonBody = buildJsonBody(requestParam);
+//                    entityRequest.setEntity(new StringEntity(jsonBody, StandardCharsets.UTF_8));
+                    entityRequest.setEntity(new StringEntity(jsonBody, ContentType.APPLICATION_JSON));
                 } else {
                     // 表单格式请求体
                     List<BasicNameValuePair> nameValuePairList = new ArrayList<>();
-                    List<String> keyList = params.keySet().stream().sorted().collect(Collectors.toList());
+                    List<String> keyList = requestParam.keySet().stream().sorted().collect(Collectors.toList());
                     keyList.forEach(key -> {
-                        BasicNameValuePair basicNameValuePair = new BasicNameValuePair(key, params.get(key));
+                        BasicNameValuePair basicNameValuePair = new BasicNameValuePair(key, validateStringValue(requestParam.get(key)));
                         nameValuePairList.add(basicNameValuePair);
                     });
                     UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(nameValuePairList, StandardCharsets.UTF_8);
                     entityRequest.setEntity(urlEncodedFormEntity);
                 }
-            } catch (UnsupportedEncodingException e) {
+            } catch (Exception e) {
                 throw new RuntimeException("Failed to set request entity", e);
             }
         }
     }
 
 
+    private String validateStringValue(Object value) {
+        if (value == null) {
+            return "";
+        }
+        return value.toString();
+    }
+
+
     /**
      * 构建JSON格式请求体
      */
-    private String buildJsonBody(Map<String, String> params) {
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.putAll(params);
-        return JSON.toJSONString(jsonObject);
+    private String buildJsonBody(Map<String, Object> requestParam) {
+        if (requestParam == null || requestParam.isEmpty()) {
+            throw new IllegalArgumentException("参数不能为空");
+        }
+        return JSONObject.toJSONString(requestParam);
     }
 
     /**
      * 构建表单格式请求体
      */
-    private String buildFormData(Map<String, String> params) throws IllegalArgumentException {
-        if (params == null || params.isEmpty()) {
+    private String buildFormData(Map<String, Object> requestParam) throws IllegalArgumentException {
+        if (requestParam == null || requestParam.isEmpty()) {
             throw new IllegalArgumentException("参数不能为空");
         }
 
         try {
-            return params.entrySet().stream()
+            return requestParam.entrySet().stream()
                     .map(entry -> {
                         try {
                             return URLEncoder.encode(entry.getKey(), StandardCharsets.UTF_8.name()) +
                                     "=" +
-                                    URLEncoder.encode(entry.getValue(), StandardCharsets.UTF_8.name());
+                                    URLEncoder.encode((validateStringValue(entry.getValue())), StandardCharsets.UTF_8.name());
                         } catch (UnsupportedEncodingException e) {
                             // UTF-8应该总是可用，但如果不可用则抛出运行时异常
                             throw new IllegalStateException("UTF-8编码不可用", e);
