@@ -70,5 +70,6 @@ out
 .metadata/
 target/*
 .idea/*
+.idea/workspace.xml
 .externalToolBuilders
 .externalToolBuilders
