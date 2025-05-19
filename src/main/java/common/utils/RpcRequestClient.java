@@ -141,12 +141,10 @@ public class RpcRequestClient {
                 || method == SdkHttpMethod.HEAD
                 || method == SdkHttpMethod.OPTIONS) {
             if (requestParam != null) {
-                requestParam.forEach((key, value) -> {
-                    if (value == null) {
-                        return;
-                    }
-                    builder.putRawQueryParameter(key, value.toString());
-                });
+                requestParam.entrySet().stream()
+                        .filter(entry -> entry.getValue() != null)
+                        .sorted(Map.Entry.comparingByKey())
+                        .forEach(entry -> builder.putRawQueryParameter(entry.getKey(), entry.getValue().toString()));
             }
         } else if (method == SdkHttpMethod.POST
                 || method == SdkHttpMethod.PUT
@@ -273,16 +271,15 @@ public class RpcRequestClient {
                 if (contentType.equalsIgnoreCase("application/json")) {
                     // JSON 格式请求体
                     String jsonBody = buildJsonBody(requestParam);
-//                    entityRequest.setEntity(new StringEntity(jsonBody, StandardCharsets.UTF_8));
                     entityRequest.setEntity(new StringEntity(jsonBody, ContentType.APPLICATION_JSON));
                 } else {
                     // 表单格式请求体
                     List<BasicNameValuePair> nameValuePairList = new ArrayList<>();
-                    List<String> keyList = requestParam.keySet().stream().sorted().collect(Collectors.toList());
-                    keyList.forEach(key -> {
-                        BasicNameValuePair basicNameValuePair = new BasicNameValuePair(key, validateStringValue(requestParam.get(key)));
-                        nameValuePairList.add(basicNameValuePair);
-                    });
+                    requestParam.entrySet().stream().filter(entry -> entry.getValue() != null)
+                            .sorted(Map.Entry.comparingByKey()).forEach(entry -> {
+                                BasicNameValuePair basicNameValuePair = new BasicNameValuePair(entry.getKey(), entry.getValue().toString());
+                                nameValuePairList.add(basicNameValuePair);
+                            });
                     UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(nameValuePairList, StandardCharsets.UTF_8);
                     entityRequest.setEntity(urlEncodedFormEntity);
                 }
@@ -321,20 +318,29 @@ public class RpcRequestClient {
 
         try {
             return requestParam.entrySet().stream()
+                    .filter(entry -> entry.getValue() != null)
+                    .sorted(Map.Entry.comparingByKey())
                     .map(entry -> {
-                        try {
-                            return URLEncoder.encode(entry.getKey(), StandardCharsets.UTF_8.name()) +
-                                    "=" +
-                                    URLEncoder.encode((validateStringValue(entry.getValue())), StandardCharsets.UTF_8.name());
-                        } catch (UnsupportedEncodingException e) {
-                            // UTF-8应该总是可用，但如果不可用则抛出运行时异常
-                            throw new IllegalStateException("UTF-8编码不可用", e);
-                        }
+                        String encodedKey = urlEncode(entry.getKey());
+                        String encodedValue = urlEncode(validateStringValue(entry.getValue()));
+                        return encodedKey + "=" + encodedValue;
                     })
                     .collect(Collectors.joining("&"));
         } catch (Exception e) {
             log.error("构建表单数据失败", e);
             throw new IllegalArgumentException("构建表单数据失败: " + e.getMessage(), e);
+        }
+    }
+
+
+    private String urlEncode(String value) {
+        try {
+            return URLEncoder.encode(value, StandardCharsets.UTF_8.name())
+                    .replace("+", "%20")
+                    .replace("*", "%2A")
+                    .replace("%7E", "~");
+        } catch (UnsupportedEncodingException e) {
+            throw new IllegalStateException("UTF-8 encoding not supported", e);
         }
     }
 
