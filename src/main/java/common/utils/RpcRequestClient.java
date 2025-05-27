@@ -277,7 +277,7 @@ public class RpcRequestClient {
                     List<BasicNameValuePair> nameValuePairList = new ArrayList<>();
                     requestParam.entrySet().stream().filter(entry -> entry.getValue() != null)
                             .sorted(Map.Entry.comparingByKey()).forEach(entry -> {
-                                BasicNameValuePair basicNameValuePair = new BasicNameValuePair(entry.getKey(), entry.getValue().toString());
+                                BasicNameValuePair basicNameValuePair = new BasicNameValuePair(entry.getKey(), validateStringValue(entry.getValue()));
                                 nameValuePairList.add(basicNameValuePair);
                             });
                     UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(nameValuePairList, StandardCharsets.UTF_8);
@@ -321,9 +321,14 @@ public class RpcRequestClient {
                     .filter(entry -> entry.getValue() != null)
                     .sorted(Map.Entry.comparingByKey())
                     .map(entry -> {
-                        String encodedKey = urlEncode(entry.getKey());
-                        String encodedValue = urlEncode(validateStringValue(entry.getValue()));
-                        return encodedKey + "=" + encodedValue;
+                        try {
+                            return URLEncoder.encode(entry.getKey(), StandardCharsets.UTF_8.name()) +
+                                    "=" +
+                                    URLEncoder.encode((validateStringValue(entry.getValue())), StandardCharsets.UTF_8.name());
+                        } catch (UnsupportedEncodingException e) {
+                            // UTF-8应该总是可用，但如果不可用则抛出运行时异常
+                            throw new IllegalStateException("UTF-8编码不可用", e);
+                        }
                     })
                     .collect(Collectors.joining("&"));
         } catch (Exception e) {
@@ -333,16 +338,6 @@ public class RpcRequestClient {
     }
 
 
-    private String urlEncode(String value) {
-        try {
-            return URLEncoder.encode(value, StandardCharsets.UTF_8.name())
-                    .replace("+", "%20")
-                    .replace("*", "%2A")
-                    .replace("%7E", "~");
-        } catch (UnsupportedEncodingException e) {
-            throw new IllegalStateException("UTF-8 encoding not supported", e);
-        }
-    }
 
 
     /**
