@@ -71,6 +71,6 @@ out
 target/*
 .idea/*
 .idea/workspace.xml
-.idea/workspace.xml
+.idea/*
 .externalToolBuilders
 .externalToolBuilders
